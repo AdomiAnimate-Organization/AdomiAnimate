@@ -10,6 +10,8 @@ on:
 # Global Settings
 env:
   SCONS_FLAGS: >-
+    disable_3d=yes
+    disable_xr=yes
     dev_mode=yes
     module_text_server_fb_enabled=yes
 
@@ -29,12 +31,6 @@ jobs:
             scons-flags: >-
               arch=arm64
               production=yes
-
-          - name: Template arm32 (target=template_debug, arch=arm32)
-            cache-name: android-template-arm32
-            target: template_debug
-            instrumented_tests: false
-            scons-flags: arch=arm32
 
           - name: Template arm64 (target=template_debug, arch=arm64)
             cache-name: android-template-arm64
