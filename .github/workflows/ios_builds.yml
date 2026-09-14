@@ -13,7 +13,7 @@ env:
 jobs:
   ios-template:
     # From https://docs.github.com/en/actions/how-tos/write-workflows/choose-where-workflows-run/choose-the-runner-for-a-job#choosing-github-hosted-runners
-    runs-on: macos-26
+    runs-on: blacksmith-6vcpu-macos-26
     name: Template (target=template_release)
     timeout-minutes: 60
 
