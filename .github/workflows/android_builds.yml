@@ -10,7 +10,6 @@ on:
 # Global Settings
 env:
   SCONS_FLAGS: >-
-    disable_3d=yes
     disable_xr=yes
     dev_mode=yes
     module_text_server_fb_enabled=yes
@@ -36,7 +35,7 @@ jobs:
             cache-name: android-template-arm64
             target: template_debug
             instrumented_tests: true
-            scons-flags: arch=arm64
+            scons-flags: arch=arm64 disable_3d=yes
 
     steps:
       - name: Checkout
